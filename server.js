@@ -21,9 +21,10 @@ app.get("/", function(req, res) {
 
 
 app.get("/test1", function(req, res) {
-    var text2 = "<h1>Good luck!</h1>";
-    text2 += "<a href='./'>Go Home</a>";
-    text2.backgroundColor = red;
+    var header = "<h1>Good luck!</h1>";
+    header.style.backgroundColor = "red"
+    var text2 = "<a href='./'>Go Home</a>";
+    res.send(header);
     res.send(text2);
   
 
