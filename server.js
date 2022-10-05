@@ -18,9 +18,7 @@ app.get("/", function(req, res) {
     res.send(text1);
 });
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "/"));
-});
+
 
 app.get("/test1", function(req, res) {
     var text2 = "<h1>Good luck!</h1><br>";
@@ -33,6 +31,10 @@ app.get("/test1", function(req, res) {
 
 app.get("/test1File", function(req, res) {
     res.sendFile(path.join(__dirname, "/views/test1.html"));
+});
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/"));
 });
 
 app.listen(HTTP_PORT, onHttpStart);
