@@ -11,7 +11,7 @@ function onHttpStart() {
 
 app.get("/", function(req, res) {
     var text1 = "<h2>Declaration</h2>";
-    text1 += "<p>I declare that this test is my own work in accordance with Seneca Academic Policy. No part of this test has <br> been copied manually or electronically from any other source.</p>";
+    text1 += "<p>I declare that this asdasdasdatest is my own work in accordance with Seneca Academic Policy. No part of this test has <br> been copied manually or electronically from any other source.</p>";
     text1 += "<p>Name: Aziz Nosirov</p>";
     text1 += "<p>Student Number: 115673188</p>";
     text1 += "<a href='./test1'>Go to Test1<a>";
@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
 app.get("/test1", function(req, res) {
     var text2 = "<h1>Good luck!</h1>";
     text2 += "<a href='./'>Go Home</a>";
-    text2.backgroundColor = "red"
+    text2.backgroundColor = red;
     res.send(text2);
   
 
