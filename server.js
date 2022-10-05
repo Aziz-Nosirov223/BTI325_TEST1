@@ -20,7 +20,7 @@ app.get("/", function(req, res) {
 
 app.get("/test1", function(req, res) {
     var text2 = "<h1>Good luck!</h1><br>";
-    tex2t += "<a href=''>Go Home</a>";
+    text2 += "<a href=''>Go Home</a>";
     res.send(text2);
   
 
