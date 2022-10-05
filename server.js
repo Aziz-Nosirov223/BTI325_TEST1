@@ -18,6 +18,10 @@ app.get("/", function(req, res) {
     res.send(text1);
 });
 
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/"));
+});
+
 app.get("/test1", function(req, res) {
     var text2 = "<h1>Good luck!</h1><br>";
     text2 += "<a href=''>Go Home</a>";
@@ -26,6 +30,7 @@ app.get("/test1", function(req, res) {
 
 });
 
+
 app.get("/test1File", function(req, res) {
     res.sendFile(path.join(__dirname, "/views/test1.html"));
 });
@@ -33,25 +38,3 @@ app.get("/test1File", function(req, res) {
 app.listen(HTTP_PORT, onHttpStart);
 
 
-/*
-
-var HTTP_PORT = process.env.PORT || 8080;
-var express = require("express");
-var app = express();
-
-
-
-
-
-
-// setup a 'route' to listen on the default url path
-app.get("/", (req, res) => {
-    var var_name = '<h2>Name: Aziz Nosirov<br>Student #: 115673188</h2>';
-    res.send(var_name);
- //   res.send("Hello World!");
-});
-
-// setup http server to listen on HTTP_PORT
-app.listen(HTTP_PORT);
-
-*/
